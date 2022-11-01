@@ -39,7 +39,8 @@ public class ConverterTest {
         String source = "127.0.0.1:5000";
         IpPort result = converter.convert(source);
         Assertions.assertThat(result).isEqualTo(new IpPort("127.0.0.1", 8000));
-
     }
+
+
 
 }
