@@ -1,4 +1,4 @@
-package hello;
+package hello.typeconverter;
 
 import hello.typeconverter.coverter.IntegerToStringConverter;
 import hello.typeconverter.coverter.IpPortToStringConverter;
@@ -13,10 +13,12 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addFormatters(FormatterRegistry registry){
-        registry.addConverter(new StringToInteger());
-        registry.addConverter(new IntegerToStringConverter());
         registry.addConverter(new StringToIpPortConverter());
         registry.addConverter(new IpPortToStringConverter());
+        registry.addConverter(new StringToInteger());
+        registry.addConverter(new IntegerToStringConverter());
+
+
     }
 
 }

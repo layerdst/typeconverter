@@ -36,8 +36,9 @@ public class ConverterTest {
     @Test
     void StringToIp(){
         StringToIpPortConverter converter = new StringToIpPortConverter();
-        String source = "127.0.0.1:5000";
+        String source = "127.0.0.1:8000";
         IpPort result = converter.convert(source);
+        System.out.println(result.getIp() + result.getPort());
         Assertions.assertThat(result).isEqualTo(new IpPort("127.0.0.1", 8000));
     }
 
